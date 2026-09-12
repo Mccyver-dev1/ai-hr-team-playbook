@@ -1,1 +1,138 @@
-<!doctype html><html lang="th"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="AI HR Team Playbook — ทีม HR ที่ทำงานร่วมกับ AI"><title>AI HR Team Playbook</title><link rel="stylesheet" href="styles.css"></head><body><div id="app"></div><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI HR Team Playbook — 17 AI HR Specialists ทำงานเป็นทีม โดยมีมนุษย์เป็นผู้ตัดสินใจ">
+  <meta name="theme-color" content="#101828">
+  <title>AI HR Team Playbook · 2026</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">✦</div>
+        <div><strong>AI HR TEAM</strong><span>PLAYBOOK v0.2.0</span></div>
+      </div>
+      <nav class="side-nav" aria-label="เมนูหลัก">
+        <a href="#dashboard" data-nav="dashboard" class="nav-item active"><span>⌂</span> Dashboard</a>
+        <a href="#team" data-nav="team" class="nav-item"><span>✦</span> รู้จัก 17 AI Specialists</a>
+        <a href="#first-three" data-nav="first-three" class="nav-item"><span>★</span> 3 คนที่ควรใช้ก่อน</a>
+        <a href="#full-cost" data-nav="full-cost" class="nav-item"><span>฿</span> ต้นทุนทีมเต็ม ↗</a>
+        <a href="#sme-cost" data-nav="sme-cost" class="nav-item"><span>▦</span> ต้นทุนแบบ SME ↗</a>
+        <a href="#agency" data-nav="agency" class="nav-item"><span>⇄</span> เทียบกับเอเจนซี ↗</a>
+        <a href="#extra-cost" data-nav="extra-cost" class="nav-item"><span>＋</span> ต้นทุนเพิ่มเติม ↗</a>
+        <a href="#workflows" data-nav="workflows" class="nav-item"><span>⌁</span> Workflows</a>
+        <a href="#governance" data-nav="governance" class="nav-item"><span>◈</span> AI ทำงาน · คุณตัดสินใจ</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="mini-card"><b>Human-in-the-loop</b><span>High-risk HR decisions always require human approval.</span></div>
+        <div class="version-row"><span>AI HR Team</span><span>2026</span></div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="เปิดเมนู">☰</button>
+        <div class="breadcrumb">AI HR Team / <b id="currentSection">Playbook</b></div>
+        <div class="top-actions">
+          <button class="ghost-btn" id="searchFocus">⌕ Agents</button>
+          <button class="primary-btn" id="connectBtn">Connect System</button>
+        </div>
+      </header>
+
+      <section id="dashboard" class="section hero-section">
+        <div class="hero-card">
+          <div class="eyebrow">AI-POWERED HR OPERATING MODEL</div>
+          <h1>ทีม HR ที่ทำงานร่วมกับ AI</h1>
+          <p>17 บทบาทเฉพาะทาง ทำงานต่อกันเป็นสายพาน ตั้งแต่กลยุทธ์ อัตรากำลัง สรรหา Payroll พนักงานสัมพันธ์ ไปจนถึง Data, Compliance และการสร้าง AI Workforce</p>
+          <div class="hero-actions">
+            <a class="primary-btn" href="#team">รู้จัก 17 AI Specialists →</a>
+            <a class="ghost-btn dark" href="#first-three">เริ่มจากใคร?</a>
+          </div>
+        </div>
+        <div class="stat-grid">
+          <div class="stat"><strong>17</strong><span>AI Specialist Roles</span></div>
+          <div class="stat"><strong>5</strong><span>Functional Groups</span></div>
+          <div class="stat"><strong>100%</strong><span>Human-in-the-loop</span></div>
+          <div class="stat"><strong>24/7</strong><span>Ready to Assist</span></div>
+        </div>
+      </section>
+
+      <section class="intro-strip">
+        <div><span class="strip-number">01</span><b>หลักการทำงาน</b><p>AI ทำงานที่เป็นการวิเคราะห์ ร่าง ตรวจ และจัดระบบ · มนุษย์ตัดสินใจเรื่องที่มีผลกระทบต่อคน เงิน และกฎหมาย</p></div>
+        <div class="principle-list"><span>INPUT</span><i>→</i><span>ANALYZE</span><i>→</i><span>VERIFY</span><i>→</i><span>APPROVE</span><i>→</i><span>LEARN</span></div>
+      </section>
+
+      <section id="team" class="section">
+        <div class="section-head"><div><div class="eyebrow">02 · THE TEAM</div><h2>รู้จัก 17 AI Specialists</h2><p>แต่ละคนมีขอบเขตงานชัดเจน พร้อม Prompt, Output และจุดส่งต่อให้มนุษย์</p></div><div class="search-box"><span>⌕</span><input id="agentSearch" placeholder="ค้นหา Agent / งาน HR..." autocomplete="off"></div></div>
+        <div class="filter-row" id="filters"></div>
+        <div class="agent-grid" id="agentGrid"></div>
+      </section>
+
+      <section id="first-three" class="section alt-section">
+        <div class="eyebrow">03 · START HERE</div><h2>3 คนที่ควรใช้ก่อน</h2><p class="section-lead">เกณฑ์คือ “ลดงานซ้ำ + ลดความเสี่ยง + เห็นผลจากข้อมูลจริง” ไม่ใช่เลือกจากตำแหน่งที่ดูหรูที่สุด</p>
+        <div class="priority-grid">
+          <article class="priority-card featured"><span class="rank">01</span><div class="priority-icon">◈</div><h3>HR Data Analyst</h3><p>เริ่มจากข้อมูลจริงใน Attendance, Leave, OT, Payroll และ KPI เพื่อรู้ว่าปัญหา HR อยู่ตรงไหนก่อนลงมือแก้</p><b>เหตุผล: วัดผลได้เร็ว</b></article>
+          <article class="priority-card"><span class="rank">02</span><div class="priority-icon">⚖</div><h3>Labor Compliance QA</h3><p>ตรวจ Policy, ประกาศ, แบบฟอร์ม และร่างเอกสารก่อนนำไปใช้ ลดความเสี่ยงจากข้อผิดพลาดด้านแรงงาน</p><b>เหตุผล: ลดความเสี่ยง</b></article>
+          <article class="priority-card"><span class="rank">03</span><div class="priority-icon">✦</div><h3>AI Workforce Designer</h3><p>ถอดงาน HR ที่ทำซ้ำและวิธีคิดของคนเก่งให้กลายเป็น Workflow/Agent ที่องค์กรใช้ซ้ำได้</p><b>เหตุผล: สร้างระบบระยะยาว</b></article>
+        </div>
+        <div class="callout"><b>ลำดับแนะนำ:</b> Data → Compliance → AI Workforce → Operations Agents → Automation</div>
+      </section>
+
+      <section id="full-cost" class="section">
+        <div class="eyebrow">04 · FULL TEAM COST</div><h2>ถ้าจ้างคนจริงครบ 17 ตำแหน่ง</h2><p class="section-lead">ตัวเลขเป็น “กรอบเปรียบเทียบ” ไม่ใช่งบประมาณจริง โดยอิงแนวโน้มตลาดแรงงานไทยปี 2026 และ mapping กับตำแหน่ง HR ที่ใกล้เคียง</p>
+        <div class="cost-hero"><div><span>ค่าแรงเทียบเท่าทีมเต็ม</span><strong>฿990,000</strong><small>/ เดือน · ตัวอย่างประมาณการ</small></div><div><span>ฐาน 12 เดือน</span><strong>฿11.88M</strong><small>/ ปี · ก่อนสวัสดิการ/ต้นทุนแฝง</small></div></div>
+        <div class="table-wrap"><table><thead><tr><th>#</th><th>AI HR Role</th><th>Equivalent human role</th><th>ตัวอย่างค่ากลาง/เดือน</th></tr></thead><tbody id="fullCostTable"></tbody></table></div>
+      </section>
+
+      <section id="sme-cost" class="section alt-section">
+        <div class="eyebrow">05 · SME MODEL</div><h2>ถ้าทำแบบ SME: 5 คนแบกหลายหมวก</h2><p class="section-lead">ในโลกจริง SME มักรวมหน้าที่เข้าด้วยกัน ข้อดีคือต้นทุนต่ำ แต่ความลึกและการตรวจสอบบางด้านจะหายไป</p>
+        <div class="sme-grid"><div class="big-cost"><span>ตัวอย่างทีม HR แบบรวมงาน</span><strong>฿305,000</strong><small>/ เดือน</small><p>ประมาณ ฿3.66M/ปี ก่อนต้นทุนอื่น</p></div><div class="role-stack" id="smeRoles"></div></div>
+        <div class="loss-grid"><div><b>สิ่งที่ยังต้องพึ่งคน</b><span>การตัดสินใจวินัย · เลิกจ้าง · เปลี่ยนสภาพการจ้าง · อนุมัติเงินเดือน</span></div><div><b>สิ่งที่ AI ช่วยเติมช่องว่าง</b><span>Data · QA · Drafting · Knowledge · Workflow · Analytics</span></div></div>
+      </section>
+
+      <section id="agency" class="section">
+        <div class="eyebrow">06 · MARKET COMPARISON</div><h2>เทียบกับเอเจนซี / ที่ปรึกษา</h2><p class="section-lead">ทีม AI ไม่ได้ “แทนคนทั้งหมด” แต่เพิ่ม capacity ให้ HR ทำงานได้ลึกขึ้น โดยเก็บความรู้และข้อมูลไว้ภายในองค์กร</p>
+        <div class="comparison"><div class="compare-card"><span>ทีม AI HR</span><strong>ระบบภายใน</strong><ul><li>ความรู้ HR อยู่ในองค์กร</li><li>ต่อยอด Feishu / HRIS ได้</li><li>ทำงานซ้ำได้ 24/7</li><li>ต้องมี Human Approval</li></ul></div><div class="vs">VS</div><div class="compare-card"><span>Agency / Consultant</span><strong>฿150K–400K+</strong><ul><li>เหมาะกับโปรเจกต์เฉพาะ</li><li>มีผู้เชี่ยวชาญภายนอก</li><li>มีค่าใช้จ่ายต่อเนื่องตาม scope</li><li>ความรู้บางส่วนอยู่นอกองค์กร</li></ul></div></div>
+        <div class="callout">แนวคิดที่เหมาะที่สุด: <b>AI + HR คนจริง + ผู้เชี่ยวชาญภายนอกเฉพาะเรื่อง</b> ไม่ใช่ AI หรือคนเพียงอย่างเดียว</div>
+      </section>
+
+      <section id="extra-cost" class="section alt-section">
+        <div class="eyebrow">07 · HIDDEN COSTS</div><h2>ต้นทุนเพิ่มเติมที่ต้องคิด</h2><p class="section-lead">การเทียบเงินเดือนอย่างเดียวไม่สะท้อนต้นทุนรวมของทีม HR</p>
+        <div class="extra-grid">
+          <div class="extra-card"><b>25–40%</b><span>ต้นทุนรวมเหนือเงินเดือนโดยประมาณ</span><small>ประกัน สวัสดิการ โบนัส และต้นทุนบริหาร</small></div>
+          <div class="extra-card"><b>Recruitment</b><span>ค่าโฆษณา/นายหน้า/เวลาที่ตำแหน่งว่าง</span><small>รวมต้นทุน onboarding และ learning curve</small></div>
+          <div class="extra-card"><b>Tools & Systems</b><span>HRIS / Payroll / AI / Analytics</span><small>รวม license, integration และ maintenance</small></div>
+          <div class="extra-card"><b>Manager Time</b><span>เวลาของหัวหน้าที่ต้องตรวจและสอน</span><small>เป็นต้นทุนแฝงที่ไม่อยู่ใน payroll</small></div>
+        </div>
+        <div class="source-note">Benchmark note: Adecco Thailand Salary Guide 2026 ระบุช่วงเงินเดือนหลายบทบาท HR ตามระดับประสบการณ์ และตลาดไทยปี 2026 มีแนวโน้มเน้น cost discipline + critical skills. ใช้เป็น reference ไม่ใช่ quotation</div>
+      </section>
+
+      <section id="workflows" class="section">
+        <div class="eyebrow">08 · OPERATING WORKFLOWS</div><h2>AI HR Operating Flow</h2><p class="section-lead">โครงสร้างกลางที่ทำให้ Agent หลายตัวทำงานต่อกันโดยไม่สร้างความเสี่ยงจากการให้ AI ตัดสินใจเอง</p>
+        <div class="workflow"><div><b>01 · INPUT</b><span>Feishu / HRIS / Documents</span></div><i>→</i><div><b>02 · ANALYZE</b><span>Specialist Agent</span></div><i>→</i><div><b>03 · VERIFY</b><span>Compliance / QA</span></div><i>→</i><div><b>04 · APPROVE</b><span>HR Manager / Authorized Person</span></div><i>→</i><div><b>05 · LEARN</b><span>Knowledge Base / Case</span></div></div>
+        <div class="workflow-grid">
+          <article><span>Attendance anomaly</span><p>Attendance Analyst → HR Data Analyst → ER → Compliance QA → Human decision</p></article>
+          <article><span>Payroll</span><p>Attendance + Leave + OT → Payroll AI → Validation → Approval → Feishu</p></article>
+          <article><span>Recruitment</span><p>Manpower Plan → TA AI → Screening → Interview → Hiring Manager</p></article>
+          <article><span>Policy change</span><p>Business request → HR Strategist → Labor QA → Human approval → Announcement</p></article>
+        </div>
+      </section>
+
+      <section id="governance" class="section governance-section">
+        <div class="eyebrow">09 · HUMAN AUTHORITY</div><h2>AI ทำงาน · คุณตัดสินใจ</h2><p class="section-lead">หลักเดียวกับต้นแบบ: AI เพิ่ม capacity แต่ “เก้าอี้ตัดสินใจ” ต้องเป็นของคนเสมอ</p>
+        <div class="governance-grid"><div><b>🛡 High-risk actions</b><span>วินัย เลิกจ้าง เปลี่ยนสภาพการจ้าง เงินเดือน และสิทธิสำคัญ ต้องมีผู้อนุมัติ</span></div><div><b>🔎 Evidence first</b><span>AI ต้องแยกข้อเท็จจริงออกจากข้อเสนอแนะ และระบุข้อมูลที่ใช้</span></div><div><b>🔐 Data boundaries</b><span>ข้อมูลพนักงานต้องเข้าถึงตามสิทธิและ purpose ที่ชัดเจน</span></div><div><b>🧾 Audit trail</b><span>บันทึก input, output, reviewer, decision และ version ของ policy</span></div></div>
+        <div class="final-banner"><strong>AI HR Team ไม่ใช่ “HR ที่ไม่มีคน”</strong><span>แต่คือ HR ที่มีผู้ช่วยเฉพาะทาง 17 คน และมีระบบควบคุมการตัดสินใจ</span></div>
+      </section>
+
+      <footer class="footer"><span>AI HR Team Playbook · v0.2.0</span><span>Human judgement remains the final authority.</span></footer>
+    </main>
+  </div>
+
+  <dialog id="agentDialog" class="agent-dialog"><div class="dialog-head"><div><span class="eyebrow">AI SPECIALIST</span><h3 id="dialogTitle"></h3></div><button id="closeDialog" class="icon-btn">×</button></div><div id="dialogBody"></div></dialog>
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
