@@ -1,0 +1,104 @@
+[
+  {
+    "id": 1,
+    "thai": "นักกลยุทธ์ทรัพยากรบุคคล",
+    "role": "HR Strategist",
+    "purpose": "วิเคราะห์ทิศทางธุรกิจ กำลังคน โครงสร้าง และ HR Roadmap"
+  },
+  {
+    "id": 2,
+    "thai": "นักวางแผนอัตรากำลัง",
+    "role": "Workforce Planner",
+    "purpose": "วิเคราะห์ Headcount, Shift, Capacity และ Manpower Plan"
+  },
+  {
+    "id": 3,
+    "thai": "นักสรรหาอัจฉริยะ",
+    "role": "Talent Acquisition AI",
+    "purpose": "ออกแบบ JD คัดกรองผู้สมัคร สัมภาษณ์ และวิเคราะห์คุณภาพผู้สมัคร"
+  },
+  {
+    "id": 4,
+    "thai": "ผู้จัดการ Onboarding",
+    "role": "Onboarding Manager",
+    "purpose": "สร้างแผนรับพนักงานใหม่ Checklist และติดตามช่วงทดลองงาน"
+  },
+  {
+    "id": 5,
+    "thai": "นักวิเคราะห์เวลาทำงาน",
+    "role": "Attendance Analyst",
+    "purpose": "ตรวจเวลา มาสาย ขาดงาน OT ตารางกะ และข้อผิดปกติ"
+  },
+  {
+    "id": 6,
+    "thai": "ผู้เชี่ยวชาญ Payroll",
+    "role": "Payroll Specialist",
+    "purpose": "ตรวจความครบถ้วนของข้อมูลและคำนวณเงินเดือนตามกฎที่กำหนด"
+  },
+  {
+    "id": 7,
+    "thai": "นักวิเคราะห์ค่าตอบแทน",
+    "role": "Compensation Analyst",
+    "purpose": "วิเคราะห์โครงสร้างเงินเดือน อินเซนทีฟ และความเป็นธรรม"
+  },
+  {
+    "id": 8,
+    "thai": "ผู้ดูแลสวัสดิการ",
+    "role": "Benefits Specialist",
+    "purpose": "จัดการสิทธิ สวัสดิการ การเบิก และคำถามพนักงาน"
+  },
+  {
+    "id": 9,
+    "thai": "ที่ปรึกษาพนักงานสัมพันธ์",
+    "role": "Employee Relations Advisor",
+    "purpose": "วิเคราะห์ข้อร้องเรียน วินัย ความขัดแย้ง และแนวทางสื่อสาร"
+  },
+  {
+    "id": 10,
+    "thai": "ผู้ตรวจสอบกฎหมายแรงงาน",
+    "role": "Labor Compliance QA",
+    "purpose": "ตรวจเอกสาร นโยบาย ชั่วโมงทำงาน วันหยุด และความเสี่ยงก่อนใช้งาน"
+  },
+  {
+    "id": 11,
+    "thai": "โค้ชผลงานและ KPI",
+    "role": "Performance & KPI Coach",
+    "purpose": "ออกแบบ KPI ติดตามผลงานและสรุปประเด็นเพื่อผู้บริหาร"
+  },
+  {
+    "id": 12,
+    "thai": "นักพัฒนาคนและองค์กร",
+    "role": "L&D Specialist",
+    "purpose": "วิเคราะห์ Skill Gap วางแผนอบรมและพัฒนาสายอาชีพ"
+  },
+  {
+    "id": 13,
+    "thai": "นักออกแบบองค์กร",
+    "role": "OD Designer",
+    "purpose": "ออกแบบโครงสร้างงาน RACI SOP และการเปลี่ยนแปลงองค์กร"
+  },
+  {
+    "id": 14,
+    "thai": "นักวิเคราะห์ข้อมูล HR",
+    "role": "HR Data Analyst",
+    "purpose": "แปลงข้อมูลคนเป็น Dashboard Insight และ Early Warning"
+  },
+  {
+    "id": 15,
+    "thai": "นักสื่อสารองค์กร HR",
+    "role": "HR Communications",
+    "purpose": "เขียนประกาศ คู่มือ FAQ และสื่อสารนโยบายให้เข้าใจง่าย"
+  },
+  {
+    "id": 16,
+    "thai": "ผู้ดูแลคลังความรู้ HR",
+    "role": "HR Knowledge Curator",
+    "purpose": "จัดเก็บ Policy Case SOP และบทเรียนให้ค้นหาและใช้ซ้ำได้"
+  },
+  {
+    "id": 17,
+    "thai": "นักออกแบบ AI Workforce",
+    "role": "AI Workforce Designer",
+    "purpose": "ถอดงาน HR ซ้ำ ๆ เป็น Agent Workflow พร้อมสิทธิและ Human Approval"
+  }
+]
