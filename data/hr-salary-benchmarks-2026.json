@@ -1,0 +1,249 @@
+{
+  "source": "Adecco Thailand Salary Guide 2026",
+  "source_url": "https://www.adecco.com/-/jssmedia/Project/Adecco/AdeccoTH/adeccothailand_salaryguide2026",
+  "experience_labels": {
+    "0-3": "0–3 ปี",
+    "3-5": "3–5 ปี",
+    "5-7": "5–7 ปี",
+    ">7": "มากกว่า 7 ปี"
+  },
+  "roles": [
+    {
+      "position": "HR / Administrative Officer",
+      "range": {
+        "0-3": [
+          20000,
+          30000
+        ],
+        "3-5": [
+          30000,
+          50000
+        ]
+      }
+    },
+    {
+      "position": "Human Resources Executive / Officer / Staff",
+      "range": {
+        "0-3": [
+          25000,
+          35000
+        ],
+        "3-5": [
+          35000,
+          50000
+        ]
+      }
+    },
+    {
+      "position": "HR - Compensation & Benefit",
+      "range": {
+        "0-3": [
+          25000,
+          35000
+        ],
+        "3-5": [
+          30000,
+          60000
+        ]
+      }
+    },
+    {
+      "position": "HRIS",
+      "range": {
+        "0-3": [
+          25000,
+          30000
+        ],
+        "3-5": [
+          30000,
+          50000
+        ],
+        "5-7": [
+          50000,
+          80000
+        ],
+        ">7": [
+          80000,
+          100000
+        ]
+      }
+    },
+    {
+      "position": "HR Generalist / HR Specialist",
+      "range": {
+        "3-5": [
+          30000,
+          50000
+        ],
+        "5-7": [
+          40000,
+          60000
+        ]
+      }
+    },
+    {
+      "position": "HRM Manager",
+      "range": {
+        "5-7": [
+          50000,
+          70000
+        ],
+        ">7": [
+          70000,
+          120000
+        ]
+      }
+    },
+    {
+      "position": "HRD Manager",
+      "range": {
+        "5-7": [
+          60000,
+          80000
+        ],
+        ">7": [
+          80000,
+          150000
+        ]
+      }
+    },
+    {
+      "position": "HROD Manager",
+      "range": {
+        "5-7": [
+          60000,
+          100000
+        ],
+        ">7": [
+          80000,
+          150000
+        ]
+      }
+    },
+    {
+      "position": "HR Business Partner",
+      "range": {
+        "5-7": [
+          60000,
+          80000
+        ],
+        ">7": [
+          80000,
+          150000
+        ]
+      }
+    },
+    {
+      "position": "Compensation and Benefit Manager",
+      "range": {
+        "5-7": [
+          70000,
+          100000
+        ],
+        ">7": [
+          100000,
+          170000
+        ]
+      }
+    },
+    {
+      "position": "Human Resources Manager / AVP - Human Resources",
+      "range": {
+        "5-7": [
+          60000,
+          90000
+        ],
+        ">7": [
+          100000,
+          180000
+        ]
+      }
+    },
+    {
+      "position": "Head of Human Resources / HR Director / SVP",
+      "range": {
+        ">7": [
+          180000,
+          300000
+        ]
+      }
+    }
+  ],
+  "ai_team": [
+    {
+      "name": "AI HR Strategist",
+      "human_benchmark": "HR Business Partner",
+      "purpose": "People Strategy, HR Roadmap และกำลังคน"
+    },
+    {
+      "name": "AI Workforce Planner",
+      "human_benchmark": "HR Business Partner",
+      "purpose": "Headcount, workload, shift, productivity และ manpower budget"
+    },
+    {
+      "name": "AI Talent Acquisition Specialist",
+      "human_benchmark": "HR Generalist / HR Specialist",
+      "purpose": "JD, sourcing plan, screening rubric และ interview guide"
+    },
+    {
+      "name": "AI HR Operations Specialist",
+      "human_benchmark": "HR / Administrative Officer",
+      "purpose": "HR workflow, employee lifecycle และ service requests"
+    },
+    {
+      "name": "AI Time & Attendance Analyst",
+      "human_benchmark": "HR Generalist / HR Specialist",
+      "purpose": "Attendance, Leave, OT และ anomaly analysis"
+    },
+    {
+      "name": "AI Payroll Specialist",
+      "human_benchmark": "HR - Compensation & Benefit",
+      "purpose": "Payroll input, leave, OT, deductions และ validation"
+    },
+    {
+      "name": "AI Compensation Analyst",
+      "human_benchmark": "Compensation and Benefit Manager",
+      "purpose": "Salary benchmark, internal equity, salary structure และ incentive"
+    },
+    {
+      "name": "AI HRIS & Automation Specialist",
+      "human_benchmark": "HRIS",
+      "purpose": "HR data, workflow, integration และ automation"
+    },
+    {
+      "name": "AI Employee Relations Advisor",
+      "human_benchmark": "HRM Manager",
+      "purpose": "Complaint/case, facts, evidence, risk และ options"
+    },
+    {
+      "name": "AI Labor Compliance QA",
+      "human_benchmark": "Human Resources Manager / AVP - Human Resources",
+      "purpose": "Policy, forms, announcements และ compliance"
+    },
+    {
+      "name": "AI People Development Specialist",
+      "human_benchmark": "HRD Manager",
+      "purpose": "Skill gap, KPI, learning และ performance"
+    },
+    {
+      "name": "AI Organization Development Specialist",
+      "human_benchmark": "HROD Manager",
+      "purpose": "Organization, roles, RACI, SOP และ change"
+    },
+    {
+      "name": "AI HR Data & People Analytics",
+      "human_benchmark": "HR Business Partner",
+      "purpose": "Dashboard, insight และ early warning"
+    },
+    {
+      "name": "AI HR Knowledge Manager",
+      "human_benchmark": "Human Resources Executive / Officer / Staff",
+      "purpose": "Policy/SOP/FAQ/case knowledge และ source version"
+    },
+    {
+      "name": "AI HR Executive Copilot",
+      "human_benchmark": "Head of Human Resources / HR Director / SVP",
+      "purpose": "Executive briefing, risks และ decision support"
+    }
+  ]
+}
