@@ -1,24 +1,16 @@
-# AI HR TEAM PLAYBOOK
+# AI HR Team Playbook — UI
 
-ระบบต้นแบบ “ทีม HR ที่ทำงานร่วมกับ AI” สำหรับองค์กร E-Commerce / Warehouse
+Production-ready static UI prototype for the AI HR Team Playbook.
 
-## แนวคิด
-AI ไม่ใช่ HR คนเดียวที่ทำทุกอย่าง แต่เป็นทีมผู้เชี่ยวชาญ 17 บทบาท:
-1. วิเคราะห์ → 2. วางแผน → 3. ดำเนินงาน → 4. ตรวจสอบ → 5. เรียนรู้และเก็บความรู้
+## Run
+Open `index.html` directly, or deploy the folder to Netlify / GitHub Pages.
 
-**หลักสำคัญ: AI ทำงาน + มนุษย์ตัดสินใจ**
+## Deploy to Netlify
+1. Upload this folder/repository.
+2. Build command: none.
+3. Publish directory: `/`.
 
-## สายงาน
-- 🧭 Strategy & Workforce (3)
-- 👥 Employee Lifecycle (5)
-- ⚖️ Employee Relations & Compliance (3)
-- 📊 Performance, OD & Data (4)
-- 🤖 Knowledge & AI Workforce (2)
+## GitHub
+Copy the files into the root of `ai-hr-team-playbook` if you want this UI to become the repository homepage.
 
-## Quick Start
-เริ่มจาก 3 Agent ก่อน:
-1. HR Data Analyst — รู้ปัญหาจริงจากข้อมูล
-2. Labor Compliance QA — ลดความเสี่ยง
-3. AI Workforce Designer — เลือกงานซ้ำที่ควรทำเป็น AI
-
-ดูรายละเอียดที่ `agents/` และแผนระบบที่ `docs/ARCHITECTURE.md`
+The UI is intentionally dependency-free (HTML/CSS/JS), so it can run without npm or a backend.
