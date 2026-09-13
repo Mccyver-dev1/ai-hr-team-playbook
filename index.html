@@ -8,7 +8,7 @@
 <body>
 <div class="app-shell">
 <aside class="sidebar" id="sidebar">
-  <div class="brand"><div class="brand-mark">✦</div><div><b>AI HR TEAM</b><span>PLAYBOOK v0.3.1</span></div></div>
+  <div class="brand"><div class="brand-mark">✦</div><div><b>AI HR TEAM</b><span>PLAYBOOK v0.3.2</span></div></div>
   <div class="side-note">AI ทำงาน · HR ตัดสินใจ</div>
   <nav class="nav">
     <a class="nav-item active" data-nav="dashboard" href="#dashboard">01 ภาพรวม</a>
@@ -34,14 +34,41 @@
 
 <section id="team" class="section"><div class="section-head"><div><div class="eyebrow">03 · THE AI HR TEAM</div><h2>AI HR Specialists</h2><p>17 บทบาทเป็น “catalog เริ่มต้น” ไม่ใช่ข้อจำกัดของระบบ สามารถเพิ่ม Specialist ใหม่ตาม Pain Point และบริการจริงของลูกค้า</p></div><div class="search-box"><span>⌕</span><input id="agentSearch" placeholder="ค้นหา Agent / งาน HR / Pain Point..." autocomplete="off"></div></div><div class="filter-row" id="filters"></div><div class="agent-grid" id="agentGrid"></div></section>
 
-<section id="packages" class="section alt-section"><div class="eyebrow">04 · SERVICE PACKAGES</div><h2>ประกอบเป็นชุดบริการได้ตามโจทย์</h2><p class="section-lead">แพ็กเกจเป็นตัวอย่างเพื่อช่วยเริ่มต้นขายบริการ ลูกค้าสามารถปรับจำนวน Agent และ workflow ได้</p><div class="package-grid" id="packageGrid"></div></section>
+<section id="packages" class="section alt-section">
+<div class="eyebrow">04 · SERVICE PACKAGES</div><h2>เลือก AI HR ที่ธุรกิจต้องการใช้</h2>
+<p class="section-lead">เลือกเฉพาะ Agent ที่ตรงกับ Pain Point ขององค์กร แล้วระบบจะสรุปมูลค่าค่าจ้างบุคลากรที่เทียบเคียงได้ เพื่อใช้ประกอบการตัดสินใจ</p>
+<div class="service-builder">
+  <div class="builder-copy"><span class="builder-kicker">CHOOSE YOUR AI HR TEAM</span><h3>เลือก Agent ที่ต้องการ</h3><p>ไม่จำเป็นต้องซื้อครบทุกตำแหน่ง เลือกเฉพาะงานที่ต้องการให้เราช่วยทำ และปรับทีมได้ตามขนาดธุรกิจ</p><button class="primary-btn" id="openChooser">เปิดแบบฟอร์มเลือกบริการ</button></div>
+  <div class="builder-summary" id="builderSummary"><span>ยังไม่ได้เลือก Agent</span><strong>0 บาท</strong><small>Benchmark ต่อเดือน</small></div>
+</div>
+<div class="package-grid" id="packageGrid"></div>
+</section>
 
 <section id="benchmark" class="section"><div class="eyebrow">05 · MARKET BENCHMARK</div><h2>อัตราค่าจ้างมนุษย์ในตลาดใช้เป็น Benchmark</h2><p class="section-lead">ข้อมูลตลาดแรงงานใช้เพื่อช่วยลูกค้าเห็น “มูลค่าของ capacity ที่กำลังเสริม” ไม่ใช่การโฆษณาหรือขาย Adecco และไม่ใช่ราคาค่าบริการ AI</p><div class="cost-hero"><div><span>หลักการ</span><strong>Benchmark</strong><small>ใช้เทียบกับต้นทุนคน ไม่ใช่ราคา AI Service</small></div><div><span>รูปแบบแสดงผล</span><strong>35,000 บาท</strong><small>แสดงเป็นเงินบาทแบบเต็ม ไม่ใช้ 35K</small></div></div><div class="table-wrap"><table><thead><tr><th>AI HR Specialist</th><th>งานมนุษย์ที่ใกล้เคียง</th><th>ช่วงค่าจ้างตามตลาด</th><th>ประสบการณ์</th></tr></thead><tbody id="benchmarkTable"></tbody></table></div><div class="source-note">Market benchmark source: Adecco Thailand Salary Guide 2026. ใช้เป็นข้อมูลอ้างอิงประกอบการออกแบบบริการและ business case เท่านั้น ไม่ใช่ quotation และไม่ใช่การรับรองว่าบทบาท AI เท่ากับตำแหน่งมนุษย์โดยตรง</div></section>
 
 <section id="workflows" class="section"><div class="eyebrow">06 · OPERATING WORKFLOWS</div><h2>AI HR ทำงานเป็นกระบวนการ ไม่ใช่แชตบอตตัวเดียว</h2><p class="section-lead">Agent หลายตัวสามารถส่งงานต่อกันตาม workflow ของลูกค้า โดยมีหลักฐาน จุดตรวจสอบ และผู้อนุมัติ</p><div class="workflow"><div><b>01 · INPUT</b><span>HRIS / Feishu / Files / Forms</span></div><i>→</i><div><b>02 · ANALYZE</b><span>Specialist Agent</span></div><i>→</i><div><b>03 · VERIFY</b><span>QA / Rules / Evidence</span></div><i>→</i><div><b>04 · APPROVE</b><span>HR / Manager</span></div><i>→</i><div><b>05 · LEARN</b><span>Knowledge / Case</span></div></div><div class="workflow-grid" id="workflowGrid"></div></section>
 
 <section id="governance" class="section governance-section"><div class="eyebrow">07 · HUMAN AUTHORITY</div><h2>AI ทำงาน · คุณตัดสินใจ</h2><p class="section-lead">AI เป็นผู้ช่วยด้านการวิเคราะห์ ร่าง ตรวจ และจัดระบบ แต่การตัดสินใจที่มีผลต่อคน เงิน สิทธิ หรือกฎหมายต้องอยู่กับผู้มีอำนาจขององค์กร</p><div class="governance-grid"><div><b>🛡 High-risk actions</b><span>วินัย เลิกจ้าง เปลี่ยนสภาพการจ้าง เงินเดือน และสิทธิสำคัญ ต้องมีผู้อนุมัติ</span></div><div><b>🔎 Evidence first</b><span>แยก Fact / Evidence / Assumption / Recommendation ให้ชัด</span></div><div><b>🔐 Data boundaries</b><span>กำหนดสิทธิการเข้าถึงข้อมูลพนักงานตาม role และ purpose</span></div><div><b>🧾 Audit trail</b><span>บันทึก input, output, reviewer, decision และ version ของ policy</span></div></div><div class="final-banner"><strong>บริการของเราไม่ใช่ “HR ที่ไม่มีคน”</strong><span>แต่คือการประกอบทีม AI HR ให้ตรงกับปัญหาของแต่ละองค์กร และให้ HR คนจริงเป็นผู้ควบคุมการตัดสินใจ</span></div></section>
-<footer class="footer"><span>AI HR Team Playbook · v0.3.1</span><span>AI works · Human remains accountable.</span></footer>
+<footer class="footer"><span>AI HR Team Playbook · v0.3.2</span><span>AI works · Human remains accountable.</span></footer>
 </main></div>
+<dialog id="chooserDialog" class="chooser-dialog">
+  <div class="dialog-head"><div><span class="eyebrow">SERVICE CONFIGURATOR</span><h3>เลือก AI HR ที่ต้องการ</h3></div><button id="closeChooser" class="icon-btn">×</button></div>
+  <div class="chooser-layout">
+    <div class="chooser-list">
+      <p class="chooser-help">ติ๊กเลือก Agent ที่ต้องการใช้ สามารถเลือกได้มากกว่า 1 รายการ</p>
+      <div id="chooserOptions"></div>
+    </div>
+    <aside class="chooser-summary">
+      <span class="summary-kicker">YOUR AI HR TEAM</span>
+      <strong id="selectedCount">0 Agent</strong>
+      <div class="summary-line"><span>ค่าแรงเทียบเคียง / เดือน</span><b id="monthlyBenchmark">0 บาท</b></div>
+      <div class="summary-line"><span>ค่าแรงเทียบเคียง / ปี</span><b id="yearlyBenchmark">0 บาท</b></div>
+      <div class="summary-note">ตัวเลขนี้เป็นค่าเฉลี่ยของช่วงค่าจ้างตลาดที่ใช้เป็น Benchmark สำหรับบทบาทมนุษย์ที่ใกล้เคียงกับ Agent ที่เลือก</div>
+      <div class="benefit-note"><b>หมายเหตุสำคัญ</b><span>ยังไม่รวมสวัสดิการอื่นๆ ของบริษัท เช่น สิทธิการลา ประกัน โบนัส ค่าใช้จ่ายในการสรรหา และอื่นๆ ตามระเบียบ หากจ้างพนักงานจริง</span></div>
+      <div class="value-box"><b>ความคุ้มค่าของบริการเรา</b><p>ใช้ Benchmark นี้เทียบกับค่าบริการ AI HR ที่เสนอจริง เพื่อเห็นความคุ้มค่าและความประหยัดขององค์กร</p><label>ค่าบริการของเรา / เดือน (กรอกเพื่อคำนวณ)</label><input id="serviceFee" type="number" min="0" step="1000" placeholder="เช่น 50000"><div class="value-results"><div><span>ประหยัดโดยประมาณ / เดือน</span><b id="monthlySaving">—</b></div><div><span>ประหยัดโดยประมาณ / ปี</span><b id="yearlySaving">—</b></div><div><span>สัดส่วนค่าบริการต่อ Benchmark</span><b id="costRatio">—</b></div></div></div>
+      <button class="primary-btn full" id="confirmSelection">ยืนยันรายการที่เลือก</button>
+    </aside>
+  </div>
+</dialog>
 <dialog id="agentDialog" class="agent-dialog"><div class="dialog-head"><div><span class="eyebrow">AI HR SPECIALIST</span><h3 id="dialogTitle"></h3></div><button id="closeDialog" class="icon-btn">×</button></div><div id="dialogBody"></div></dialog><div class="toast" id="toast"></div><script src="app.js"></script>
 </body></html>

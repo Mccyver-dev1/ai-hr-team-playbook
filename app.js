@@ -42,7 +42,41 @@ function renderAgents(){const q=(search.value||'').toLowerCase().trim();const li
 function openAgent(id){const a=agents.find(x=>x.id===id);$('dialogTitle').textContent=a.name;$('dialogBody').innerHTML=`<div class="dialog-en">${a.thai} · ${a.market}</div><div class="dialog-section"><b>Mission</b><p>${a.desc}</p></div><div class="dialog-section"><b>Pain ที่เหมาะกับ Agent นี้</b><p>${a.pain.join(' · ')}</p></div><div class="dialog-section"><b>Market benchmark (มนุษย์)</b><p>${a.bench} · ${a.exp}</p></div><div class="dialog-section"><b>ตัวอย่าง Prompt</b><pre>${a.prompt}</pre></div><div class="dialog-section"><b>Human approval</b><p>AI วิเคราะห์/ร่าง/ตรวจได้ แต่ไม่อนุมัติการลงโทษ การเลิกจ้าง การเปลี่ยนสภาพการจ้าง การจ่ายเงิน หรือสิทธิสำคัญแทนมนุษย์</p></div>`;$('agentDialog').showModal()}
 $('closeDialog').onclick=()=>$('agentDialog').close();$('agentDialog').addEventListener('click',e=>{if(e.target===$('agentDialog'))$('agentDialog').close()});search.addEventListener('input',renderAgents);renderFilters();renderAgents();
 $('painGrid').innerHTML=pains.map((p,i)=>`<article class="priority-card ${i===0?'featured':''}"><span class="rank">${String(i+1).padStart(2,'0')}</span><div class="priority-icon">${p[0]}</div><h3>${p[1]}</h3><p>${p[2]}</p><b>${p[3].join(' · ')}</b></article>`).join('');
-$('packageGrid').innerHTML=packages.map(p=>`<article class="priority-card"><div class="priority-icon">✦</div><h3>${p[0]}</h3><p>${p[1]}</p><b>${p.slice(2).join(' · ')}</b></article>`).join('');
+const money=n=>`${Math.round(n).toLocaleString('th-TH')} บาท`;
+function benchmarkAverage(bench){
+  const nums=(bench.match(/[0-9][0-9,]*/g)||[]).map(x=>Number(x.replace(/,/g,'')));
+  let mids=[]; for(let i=0;i+1<nums.length;i+=2) mids.push((nums[i]+nums[i+1])/2);
+  return mids.length ? mids.reduce((a,b)=>a+b,0)/mids.length : 0;
+}
+agents.forEach(a=>a.benchmarkAverage=benchmarkAverage(a.bench));
+let selectedAgents=new Set();
+function renderChooser(){
+  const byGroup={}; agents.forEach(a=>(byGroup[a.group]??=[]).push(a));
+  $('chooserOptions').innerHTML=Object.entries(byGroup).map(([group,list])=>`<div class="chooser-group"><h4>${group}</h4>${list.map(a=>`<label class="chooser-option"><input type="checkbox" data-agent-id="${a.id}" ${selectedAgents.has(a.id)?'checked':''}><span class="chooser-check"></span><span class="chooser-main"><b>${a.name}</b><small>${a.thai}</small></span><span class="chooser-benchmark">${money(a.benchmarkAverage)}<small>/ เดือน โดยเฉลี่ย</small></span></label>`).join('')}</div>`).join('');
+  document.querySelectorAll('#chooserOptions input').forEach(input=>input.onchange=()=>{const id=+input.dataset.agentId;if(input.checked)selectedAgents.add(id);else selectedAgents.delete(id);updateChooserSummary();});
+}
+function updateChooserSummary(){
+  const chosen=agents.filter(a=>selectedAgents.has(a.id));
+  const monthly=chosen.reduce((sum,a)=>sum+a.benchmarkAverage,0), yearly=monthly*12;
+  $('selectedCount').textContent=`${chosen.length} Agent`;
+  $('monthlyBenchmark').textContent=money(monthly);
+  $('yearlyBenchmark').textContent=money(yearly);
+  $('builderSummary').innerHTML=chosen.length?`<span>ทีมที่เลือก</span><strong>${money(monthly)}</strong><small>/ เดือน · ${money(yearly)} / ปี</small>`:`<span>ยังไม่ได้เลือก Agent</span><strong>0 บาท</strong><small>Benchmark ต่อเดือน</small>`;
+  const fee=Number($('serviceFee').value||0);
+  if(fee>0&&monthly>0){
+    const saving=monthly-fee;
+    $('monthlySaving').textContent=money(saving);
+    $('yearlySaving').textContent=money(saving*12);
+    $('costRatio').textContent=`${((fee/monthly)*100).toFixed(1)}%`;
+  }else{$('monthlySaving').textContent='—';$('yearlySaving').textContent='—';$('costRatio').textContent='—';}
+}
+$('packageGrid').innerHTML=packages.map(p=>`<article class="priority-card"><div class="priority-icon">✦</div><h3>${p[0]}</h3><p>${p[1]}</p><b>${p.slice(2).join(' · ')}</b><button class="package-select" data-package="${p[0]}">เลือกชุดนี้</button></article>`).join('');
+$('openChooser').onclick=()=>{$('chooserDialog').showModal();renderChooser();updateChooserSummary()};
+$('closeChooser').onclick=()=>$('chooserDialog').close();
+$('chooserDialog').addEventListener('click',e=>{if(e.target===$('chooserDialog'))$('chooserDialog').close()});
+$('serviceFee').addEventListener('input',updateChooserSummary);
+document.querySelectorAll('.package-select').forEach(btn=>btn.onclick=()=>{const pack=packages.find(p=>p[0]===btn.dataset.package);selectedAgents=new Set(pack.slice(2).map(name=>agents.find(a=>a.name===name)?.id).filter(Boolean));$('chooserDialog').showModal();renderChooser();updateChooserSummary();});
+$('confirmSelection').onclick=()=>{$('chooserDialog').close();document.querySelector('#packages').scrollIntoView({behavior:'smooth'});showToast(`เลือก ${selectedAgents.size} Agent แล้ว`)};
 $('workflowGrid').innerHTML=workflows.map(w=>`<article><span>${w[0]}</span><p>${w[1]}</p></article>`).join('');
 $('benchmarkTable').innerHTML=agents.map(a=>`<tr><td><b>${a.name}</b><br><span style="color:#8791a0">${a.thai}</span></td><td>${a.market}</td><td>${a.bench}</td><td>${a.exp}</td></tr>`).join('');
 const sections=[...document.querySelectorAll('section[id]')],navs=[...document.querySelectorAll('.nav-item')];const names={dashboard:'ภาพรวม','pain-points':'เลือกจาก Pain Point',team:'AI HR Specialists',packages:'ชุดบริการ',benchmark:'Market Benchmark',workflows:'Workflows',governance:'AI ทำงาน · คุณตัดสินใจ'};const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){navs.forEach(n=>n.classList.toggle('active',n.dataset.nav===e.target.id));$('currentSection').textContent=names[e.target.id]||'Playbook'}}),{rootMargin:'-35% 0px -55% 0px',threshold:0});sections.forEach(s=>observer.observe(s));
