@@ -1,0 +1,20 @@
+{
+  "purpose": "Human HR market benchmark used to support service design and business-case comparison. It is not AI pricing and does not imply direct equivalence between AI and human roles.",
+  "source": "Adecco Thailand Salary Guide 2026",
+  "source_url": "https://www.adecco.com/-/jssmedia/Project/Adecco/AdeccoTH/adeccothailand_salaryguide2026",
+  "display_currency": "THB",
+  "roles": [
+    {"role":"Compensation and Benefit Manager","0_3":null,"3_5":null,"5_7":[70000,100000],"7_plus":[100000,170000]},
+    {"role":"HR - Compensation & Benefit","0_3":[25000,35000],"3_5":[30000,60000],"5_7":null,"7_plus":null},
+    {"role":"HR / Administrative Officer","0_3":[20000,30000],"3_5":[30000,50000],"5_7":null,"7_plus":null},
+    {"role":"HR Business Partner","0_3":null,"3_5":null,"5_7":[60000,80000],"7_plus":[80000,150000]},
+    {"role":"HR Generalist / HR Specialist","0_3":null,"3_5":[30000,50000],"5_7":[40000,60000],"7_plus":null},
+    {"role":"HRD Manager","0_3":null,"3_5":null,"5_7":[60000,80000],"7_plus":[80000,150000]},
+    {"role":"HRIS","0_3":[25000,30000],"3_5":[30000,50000],"5_7":[50000,80000],"7_plus":[80000,100000]},
+    {"role":"HRM Manager","0_3":null,"3_5":null,"5_7":[50000,70000],"7_plus":[70000,120000]},
+    {"role":"HROD Manager","0_3":null,"3_5":null,"5_7":[60000,100000],"7_plus":[80000,150000]},
+    {"role":"Human Resources Executive / Officer / Staff","0_3":[25000,35000],"3_5":[35000,50000],"5_7":null,"7_plus":null},
+    {"role":"Human Resources Manager / AVP - Human Resources","0_3":null,"3_5":null,"5_7":[60000,90000],"7_plus":[100000,180000]},
+    {"role":"Head of Human Resources / HR Director / SVP","0_3":null,"3_5":null,"5_7":null,"7_plus":[180000,300000]}
+  ]
+}

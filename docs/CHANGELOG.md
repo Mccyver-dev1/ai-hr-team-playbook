@@ -1,8 +1,10 @@
 # Changelog
 
-## v0.3.0
-- Removed dependency on a fixed 17-role count.
-- Added 15 functional AI HR specialists.
-- Added 12 HR positions and salary ranges from Adecco Thailand Salary Guide 2026.
-- Added salary calculator and team-cost simulator.
-- Added functional workflow and governance UI.
+## v0.3.1
+- Re-centered the product around client pain points and selectable AI HR services.
+- Restored the original 17-specialist concept as an expandable starting catalog.
+- Added pain-point discovery and service packages.
+- Added market benchmark as supporting data only.
+- Removed Adecco-centric presentation and any implication that Adecco is the service provider.
+- Salary display uses full Thai Baht format such as “35,000 บาท”.
+- Kept human approval for high-impact HR decisions.
